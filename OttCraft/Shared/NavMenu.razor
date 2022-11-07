@@ -1,0 +1,79 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">OTT-Craft</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="smp" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> SMP
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="normalsurvival" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Survival: Normal
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="hardsurvival" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Survival: Hard
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="creative" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Creative
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="plots" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Plots
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="skyblock" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Sky Block
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="bedwars" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Bed Wars
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="anarchy" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Anarchy
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="founders" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Founders
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="rules" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> OTT-Craft Rules
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
